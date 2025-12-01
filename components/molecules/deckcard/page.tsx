@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/atoms/cards/page";
 import EditDeck from "../editDeck/page";
+import DeleteButton from "../deleteButton/page";
 
 type Props = {
     name:string
@@ -24,9 +25,7 @@ function Deckcard({name,memo}:Props){
             </CardHeader>
             <CardFooter className="flex-col gap-2">
                 <EditDeck editName={name} editMemo={memo}/>
-                <Button variant="destructive" className="w-full bg-red-400 cursor-pointer">
-                    削除
-                </Button>
+                <DeleteButton deleteName={name}/>
             </CardFooter>
         </Card>
     )
