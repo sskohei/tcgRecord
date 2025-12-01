@@ -6,7 +6,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/atoms/table/page"
+} from "@/components/atoms/table/page";
+import { Button } from "@/components/atoms/Button/page";
 
 function Gamerecord(){
     return(

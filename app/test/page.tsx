@@ -1,5 +1,5 @@
-import Header from "@/components/organism/header/page"
-import Mainmenu from "@/components/organism/mainmenu/page"
+import Header from "@/components/organism/header/page";
+import Mainmenu from "@/components/organism/mainmenu/page";
 
 function Page(){
     return(
