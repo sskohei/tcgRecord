@@ -25,7 +25,7 @@ function DeleteButton({deleteName}:Props){
                 <DialogHeader>
                     <DialogTitle className="text-red-500">デッキの削除</DialogTitle>
                     <DialogDescription>
-                        あなたは{deleteName}を削除しようとしています。これは取り消すことができない操作です。本当に削除してよろしいですか?
+                        あなたはデッキ「{deleteName}」を削除しようとしています。これは取り消すことができない操作です。本当に削除してよろしいですか?
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>

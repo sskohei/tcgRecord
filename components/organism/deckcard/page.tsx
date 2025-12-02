@@ -8,8 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/atoms/cards/page";
-import EditDeck from "../editDeck/page";
-import DeleteButton from "../deleteButton/page";
+import EditDeck from "../../molecules/editDeck/page";
+import DeleteButton from "../../molecules/deleteButton/page";
 
 type Props = {
     name:string

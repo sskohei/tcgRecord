@@ -2,7 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/atoms/tab
 import Gamerecord from "@/components/molecules/gamerecord/page";
 import Addbuttle from "@/components/molecules/addButtle/page";
 import Adddeck from "@/components/molecules/addDeck/page";
-import Deckcard from "@/components/molecules/deckcard/page";
+import Deckcard from "@/components/organism/deckcard/page";
 
 function Mainmenu(){
     return(
