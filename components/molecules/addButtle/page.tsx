@@ -14,10 +14,22 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/atoms/sheet/page"
+} from "@/components/atoms/sheet/page";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/atoms/select/page"
 
-//データベースに登録する処理を書く
 function Addbuttle(){
+    const decks = [
+        {name:"deck1"},
+        {name:"deck2"}
+    ]
     return(
         <Sheet>
             <SheetTrigger asChild>
@@ -59,15 +71,43 @@ function Addbuttle(){
                     </div>
                     <div className="grid gap-3">
                         <Label>使用デッキ</Label>
+                        <Select>
+                            <SelectTrigger className="w-[180px]">
+                                <SelectValue placeholder="使用デッキを選択"/>
+                            </SelectTrigger>
+                            <SelectContent className="text-slate-950 bg-white">
+                                <SelectGroup>
+                                    <SelectLabel>使用デッキ</SelectLabel>
+                                    {decks.map((deck)=>(
+                                        <SelectItem value={deck.name}>{deck.name}</SelectItem>
+                                    ))}
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
                     </div>
                     <div className="grid gap-3">
                         <Label>相手のデッキ</Label>
+                        <Select>
+                            <SelectTrigger className="w-[180px]">
+                                <SelectValue placeholder="相手のデッキを選択"/>
+                            </SelectTrigger>
+                            <SelectContent className="text-slate-950 bg-white">
+                                <SelectGroup>
+                                    <SelectLabel>相手のデッキ</SelectLabel>
+                                    {decks.map((deck)=>(
+                                        <SelectItem value={deck.name}>{deck.name}</SelectItem>
+                                    ))}
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
                     </div>
                 </div>
                 <SheetFooter>
-                    <Button type="submit" variant="default" className="bg-white text-slate-950">追加する</Button>
+                    <Button type="submit" variant="default" className="bg-white text-slate-950 cursor-pointer">
+                        追加する
+                    </Button>
                     <SheetClose asChild>
-                        <Button variant="outline">閉じる</Button>
+                        <Button variant="outline" className="cursor-pointer">閉じる</Button>
                     </SheetClose>
                 </SheetFooter>
             </SheetContent>
