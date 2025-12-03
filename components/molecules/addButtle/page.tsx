@@ -2,6 +2,10 @@ import { Button } from "@/components/atoms/Button/page"
 import { Input } from "@/components/atoms/input/page"
 import { Label } from "@/components/atoms/label/page"
 import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/components/atoms/radioGroup/page"
+import {
   Sheet,
   SheetClose,
   SheetContent,
@@ -28,12 +32,36 @@ function Addbuttle(){
                 </SheetHeader>
                 <div className="grid flex-1 auto-rows-min gap-6 px-4">
                     <div className="grid gap-3">
-                        <Label htmlFor="sheet-demo-name">Name</Label>
-                        <Input id="sheet-demo-name" defaultValue="Pedro Duarte" />
+                        <Label>先行/後攻</Label>
+                        <RadioGroup>
+                            <div className="flex gap-3">
+                                <RadioGroupItem value="first" id="r1" className="data-[state=checked]:bg-white"/>
+                                <Label htmlFor="r1">先行</Label>
+                            </div>
+                            <div className="flex gap-3">
+                                <RadioGroupItem value="second" id="r2" className="data-[state=checked]:bg-white"/>
+                                <Label htmlFor="r2">後攻</Label>
+                            </div>
+                        </RadioGroup>
                     </div>
                     <div className="grid gap-3">
-                        <Label htmlFor="sheet-demo-username">Username</Label>
-                        <Input id="sheet-demo-username" defaultValue="@peduarte" />
+                        <Label>勝敗</Label>
+                        <RadioGroup>
+                            <div className="flex gap-3">
+                                <RadioGroupItem value="win" id="win" className="data-[state=checked]:bg-white"/>
+                                <Label htmlFor="win">勝利</Label>
+                            </div>
+                            <div className="flex gap-3">
+                                <RadioGroupItem value="lose" id="lose" className="data-[state=checked]:bg-white"/>
+                                <Label htmlFor="lose">敗北</Label>
+                            </div>
+                        </RadioGroup>
+                    </div>
+                    <div className="grid gap-3">
+                        <Label>使用デッキ</Label>
+                    </div>
+                    <div className="grid gap-3">
+                        <Label>相手のデッキ</Label>
                     </div>
                 </div>
                 <SheetFooter>
