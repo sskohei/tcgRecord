@@ -1,7 +1,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/atoms/tabs/page";
 import Gamerecord from "@/components/molecules/gamerecord/page";
-import Addbuttle from "@/components/molecules/addButtle/page";
-import Adddeck from "@/components/molecules/addDeck/page";
+import Addbuttle from "@/components/molecules/addButton/addButtle/page";
+import Adddeck from "@/components/molecules/addButton/addDeck/page";
 import Deckcard from "@/components/organism/deckcard/page";
 import DemoPage from "@/components/atoms/data-table/page";
 
