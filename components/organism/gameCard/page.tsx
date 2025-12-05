@@ -45,7 +45,7 @@ function Gamecard(){
             <Card key={name.id} className="w-full max-w-sm gap-3s">
             <CardHeader>
                 <CardTitle>
-                        <Button variant="link"onClick={()=>{selectGame(name.gameName),console.log(game)}}>
+                        <Button variant="link"onClick={()=>selectGame(name.gameName)}>
                             <Link href="/test">{name.gameName}</Link>
                         </Button>
                 </CardTitle>

@@ -52,7 +52,7 @@ function Header(){
             新規登録
           </Link>
           <Link
-            href="/mypage"
+            href="/mypages"
             className="block px-3 py-2 rounded-md text-base font-semibold bg-cyan-400 text-slate-900"
           >
             マイページ(テスト)
