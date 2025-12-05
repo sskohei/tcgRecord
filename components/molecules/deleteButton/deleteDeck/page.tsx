@@ -13,7 +13,7 @@ type Props = {
     deleteName:string
 }
 
-function DeleteButton({deleteName}:Props){
+function DeleteDeck({deleteName}:Props){
     return(
         <Dialog>
         <DialogTrigger asChild>
@@ -25,7 +25,7 @@ function DeleteButton({deleteName}:Props){
                 <DialogHeader>
                     <DialogTitle className="text-red-500">デッキの削除</DialogTitle>
                     <DialogDescription>
-                        あなたはデッキ「{deleteName}」を削除しようとしています。これは取り消すことができない操作です。本当に削除してよろしいですか?
+                        あなたはデッキ{deleteName}」を削除しようとしています。これは取り消すことができない操作です。本当に削除してよろしいですか?
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>
@@ -38,4 +38,4 @@ function DeleteButton({deleteName}:Props){
     </Dialog>
     )
 }
-export default DeleteButton;
+export default DeleteDeck;

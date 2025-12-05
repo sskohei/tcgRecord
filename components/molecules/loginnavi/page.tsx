@@ -11,7 +11,7 @@ function Loginnavi(){
                 <Link href="/signup">新規登録</Link>
             </Button>
             <Button variant="outline" asChild>
-                <Link href="/test">テスト</Link>
+                <Link href="/mypage">マイページ(テスト)</Link>
             </Button>
         </nav>
     )

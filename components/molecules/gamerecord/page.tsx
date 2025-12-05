@@ -1,29 +1,27 @@
-import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/atoms/table/page";
-import { Button } from "@/components/atoms/Button/page";
+import { columns, Payment } from "@/components/atoms/data-table/columns"
+import { DataTable } from "@/components/atoms/data-table/data-table"
 
-function Gamerecord(){
-    return(
-        <Table>
-            <TableCaption></TableCaption>
-            <TableHeader>
-                <TableRow>
-                    <TableHead className="w-[100px]">日付</TableHead>
-                    <TableHead>使用デッキ</TableHead>
-                    <TableHead>相手のデッキ</TableHead>
-                    <TableHead>先後</TableHead>
-                    <TableHead>勝敗</TableHead>
-                </TableRow>
-            </TableHeader>
-        </Table>
-    )
+async function getData(): Promise<Payment[]> {
+  // Fetch data from your API here.
+  return [
+    {
+      id: 1,
+      date:"2025-12-4",
+      mydeck:"deck1",
+      opponent:"deck2",
+      first:"先行",
+      result:"win",
+    },
+    // ...
+  ]
 }
 
-export default Gamerecord
+export default async function Gamerecord() {
+  const data = await getData()
+
+  return (
+    <div className="container mx-auto py-10">
+      <DataTable columns={columns} data={data} />
+    </div>
+  )
+}

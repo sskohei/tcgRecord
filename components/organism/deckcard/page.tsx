@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from "@/components/atoms/Button/page";
 import {
   Card,
@@ -8,8 +10,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/atoms/cards/page";
-import EditDeck from "../../molecules/editDeck/page";
-import DeleteButton from "../../molecules/deleteButton/page";
+import EditDeck from "../../molecules/editButton/editDeck/page";
+import DeleteDeck from "../../molecules/deleteButton/deleteDeck/page";
 
 type Props = {
     name:string
@@ -25,7 +27,7 @@ function Deckcard({name,memo}:Props){
             </CardHeader>
             <CardFooter className="flex-col gap-2">
                 <EditDeck editName={name} editMemo={memo}/>
-                <DeleteButton deleteName={name}/>
+                <DeleteDeck deleteName={name}/>
             </CardFooter>
         </Card>
     )

@@ -27,8 +27,12 @@ import {
 
 function Addbuttle(){
     const decks = [
-        {name:"deck1"},
-        {name:"deck2"}
+        {name:"deck1",
+         battle_id:1   
+        },
+        {name:"deck2",
+         battle_id:2
+        }
     ]
     return(
         <Sheet>
@@ -79,7 +83,7 @@ function Addbuttle(){
                                 <SelectGroup>
                                     <SelectLabel>使用デッキ</SelectLabel>
                                     {decks.map((deck)=>(
-                                        <SelectItem value={deck.name}>{deck.name}</SelectItem>
+                                        <SelectItem key={deck.battle_id} value={deck.name}>{deck.name}</SelectItem>
                                     ))}
                                 </SelectGroup>
                             </SelectContent>
@@ -95,7 +99,7 @@ function Addbuttle(){
                                 <SelectGroup>
                                     <SelectLabel>相手のデッキ</SelectLabel>
                                     {decks.map((deck)=>(
-                                        <SelectItem value={deck.name}>{deck.name}</SelectItem>
+                                        <SelectItem key={deck.battle_id} value={deck.name}>{deck.name}</SelectItem>
                                     ))}
                                 </SelectGroup>
                             </SelectContent>
