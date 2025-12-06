@@ -9,11 +9,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/atoms/dialog/page"
+
 type Props = {
     deleteName:string
 }
 
-function DeleteDeck({deleteName}:Props){
+function DeleteTagsButtle({deleteName}:Props){
     return(
         <Dialog>
         <DialogTrigger asChild>
@@ -23,9 +24,9 @@ function DeleteDeck({deleteName}:Props){
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px] bg-slate-950 text-white">
                 <DialogHeader>
-                    <DialogTitle className="text-red-500">デッキの削除</DialogTitle>
+                    <DialogTitle className="text-red-500">対戦タグの削除</DialogTitle>
                     <DialogDescription>
-                        あなたはデッキ「{deleteName}」を削除しようとしています。これは取り消すことができない操作です。本当に削除してよろしいですか?
+                        あなたは対戦タグ「{deleteName}」を削除しようとしています。これは取り消すことができない操作です。本当に削除してよろしいですか?
                     </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>
@@ -38,4 +39,4 @@ function DeleteDeck({deleteName}:Props){
     </Dialog>
     )
 }
-export default DeleteDeck;
+export default DeleteTagsButtle

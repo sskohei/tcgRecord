@@ -37,7 +37,7 @@ function Addbuttle(){
     return(
         <Sheet>
             <SheetTrigger asChild>
-                <Button variant="outline" className="cursor-pointer">
+                <Button variant="outline" className="cursor-pointer m-3">
                     対戦結果を追加
                 </Button>
             </SheetTrigger>

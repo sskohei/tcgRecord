@@ -40,7 +40,7 @@ function Gamecard(){
     const data =  getData()
 
     return(
-        <div className="flex">
+        <div className="flex m-2 gap-3">
         {data.map((name:Props)=>(
             <Card key={name.id} className="w-full max-w-sm gap-3s">
             <CardHeader>

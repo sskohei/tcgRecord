@@ -12,26 +12,22 @@ import {
   SheetTrigger,
 } from "@/components/atoms/sheet/page"
 
-function Adddeck(){
+function AddTagsButtle(){
     return(
         <Sheet>
             <SheetTrigger asChild>
                 <Button variant="outline" className="cursor-pointer m-3">
-                    デッキを追加
+                    対戦タグを追加
                 </Button>
             </SheetTrigger>
             <SheetContent className="bg-slate-950 text-slate-50">
                 <SheetHeader>
-                    <SheetTitle>デッキを追加する</SheetTitle>
+                    <SheetTitle>対戦タグを追加する</SheetTitle>
                 </SheetHeader>
                 <div className="grid flex-1 auto-rows-min gap-6 px-4">
                     <div className="grid gap-3">
-                        <Label htmlFor="sheet-demo-name">デッキ名</Label>
-                        <Input id="sheet-demo-name" defaultValue="デッキ名" />
-                    </div>
-                    <div className="grid gap-3">
-                        <Label htmlFor="sheet-demo-name">メモ</Label>
-                        <Input id="sheet-demo-name" defaultValue="メモ" />
+                        <Label htmlFor="sheet-demo-name">対戦タグ</Label>
+                        <Input id="sheet-demo-name" defaultValue="対戦タグ" />
                     </div>
                 </div>
                 <SheetFooter>
@@ -45,4 +41,4 @@ function Adddeck(){
     )
 }
 
-export default Adddeck
+export default AddTagsButtle

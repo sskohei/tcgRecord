@@ -1,6 +1,4 @@
-'use client';
 
-import { Button } from "@/components/atoms/Button/page";
 import {
   Card,
   CardAction,
@@ -14,22 +12,44 @@ import EditDeck from "../../molecules/editButton/editDeck/page";
 import DeleteDeck from "../../molecules/deleteButton/deleteDeck/page";
 
 type Props = {
-    name:string
-    memo:string
+    id:number,
+    deckName:string,
+    memo:string,
 };
 
-function Deckcard({name,memo}:Props){
+function getData():Props[]{
+    return[
+        {
+            id:1,
+            deckName:"deck1",
+            memo:"コントロール",
+        },
+        {
+            id:2,
+            deckName:"deck2",
+            memo:"アグロ",
+        },
+    ]
+}
+
+function Deckcard(){
+    const data = getData();
+
     return(
-        <Card className="w-full max-w-sm">
+        <div className="flex m-2 gap-3">
+        {data.map((deck:Props)=>(
+            <Card key={deck.id} className="w-full max-w-sm gap-3s">
             <CardHeader>
-                <CardTitle>{name}</CardTitle>
-                <CardDescription>{memo}</CardDescription>
+                <CardTitle>{deck.deckName}</CardTitle>
+                <CardDescription>{deck.memo}</CardDescription>
             </CardHeader>
             <CardFooter className="flex-col gap-2">
-                <EditDeck editName={name} editMemo={memo}/>
-                <DeleteDeck deleteName={name}/>
+                    <EditDeck editName={deck.deckName} editMemo={deck.memo}/>
+                    <DeleteDeck deleteName={deck.deckName}/>
             </CardFooter>
         </Card>
+        ))}
+        </div>
     )
 }
 
