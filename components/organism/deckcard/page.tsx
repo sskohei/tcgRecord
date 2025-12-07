@@ -44,8 +44,8 @@ function Deckcard(){
                 <CardDescription>{deck.memo}</CardDescription>
             </CardHeader>
             <CardFooter className="flex-col gap-2">
-                    <EditDeck editName={deck.deckName} editMemo={deck.memo}/>
-                    <DeleteDeck deleteName={deck.deckName}/>
+                <EditDeck editName={deck.deckName} editMemo={deck.memo}/>
+                <DeleteDeck deleteName={deck.deckName}/>
             </CardFooter>
         </Card>
         ))}

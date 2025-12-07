@@ -3,9 +3,8 @@ import Gamerecord from "@/components/organism/gameLogsTable/page";
 import Addbuttle from "@/components/molecules/addButton/addButtle/page";
 import Adddeck from "@/components/molecules/addButton/addDeck/page";
 import Deckcard from "@/components/organism/deckcard/page";
-import DemoPage from "@/components/atoms/data-table/page";
-import TagsButtle from "../Tags_Buttle/page";
-import AddTagsButtle from "@/components/molecules/addButton/addTags_Buttle/page";
+import TagsButtle from "../../organism/Tags_Buttle/page";
+import ChartsGroup from "@/components/organism/Charts_group/page";
 
 function Mainmenu(){
     return(
@@ -20,13 +19,14 @@ function Mainmenu(){
                 <Addbuttle/>
                 <Gamerecord/>
             </TabsContent>
-            <TabsContent value="統計"></TabsContent>
+            <TabsContent value="統計">
+                <ChartsGroup/>
+            </TabsContent>
             <TabsContent value="デッキ">
                 <Adddeck/>
-                <Deckcard name="deck1" memo="このデッキは..."/>
+                <Deckcard/>
             </TabsContent>
             <TabsContent value="対戦タグ" className="gap-3">
-                
                 <TagsButtle/>
             </TabsContent>
         </Tabs>
