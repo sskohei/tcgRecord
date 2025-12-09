@@ -13,7 +13,6 @@ function Mainmenu(){
                 <TabsTrigger value="対戦履歴">対戦履歴</TabsTrigger>    
                 <TabsTrigger value="統計">統計※開発中</TabsTrigger>
                 <TabsTrigger value="デッキ">デッキ</TabsTrigger>
-                <TabsTrigger value="対戦タグ">対戦タグ</TabsTrigger>
             </TabsList>
             <TabsContent value="対戦履歴">
                 <Addbuttle/>
@@ -25,9 +24,6 @@ function Mainmenu(){
             <TabsContent value="デッキ">
                 <Adddeck/>
                 <Deckcard/>
-            </TabsContent>
-            <TabsContent value="対戦タグ" className="gap-3">
-                <TagsButtle/>
             </TabsContent>
         </Tabs>
     )
