@@ -41,12 +41,16 @@ function Addbuttle(){
                     対戦結果を追加
                 </Button>
             </SheetTrigger>
-            <SheetContent className="bg-slate-950 text-slate-50">
-                <SheetHeader>
+            <SheetContent className="bg-slate-950 text-slate-50 flex flex-col h-full">
+                <SheetHeader className="px-4 pt-4">
                     <SheetTitle>対戦結果を入力</SheetTitle>
-                    <SheetDescription>行った対戦の内容を入力してください</SheetDescription>
+                    <SheetDescription>
+                        行った対戦の内容を入力してください
+                    </SheetDescription>
                 </SheetHeader>
-                <div className="grid flex-1 auto-rows-min gap-6 px-4">
+
+                {/* ← スクロール可能にする重要ポイント */}
+                <div className="flex-1 overflow-y-auto grid auto-rows-min gap-6 px-4 py-4">
                     <div className="grid gap-3">
                         <Label>先行/後攻</Label>
                         <RadioGroup>
@@ -60,6 +64,7 @@ function Addbuttle(){
                             </div>
                         </RadioGroup>
                     </div>
+
                     <div className="grid gap-3">
                         <Label>勝敗</Label>
                         <RadioGroup>
@@ -73,6 +78,7 @@ function Addbuttle(){
                             </div>
                         </RadioGroup>
                     </div>
+
                     <div className="grid gap-3">
                         <Label>使用デッキ</Label>
                         <Select>
@@ -89,6 +95,7 @@ function Addbuttle(){
                             </SelectContent>
                         </Select>
                     </div>
+
                     <div className="grid gap-3">
                         <Label>相手のデッキ</Label>
                         <Select>
@@ -106,7 +113,9 @@ function Addbuttle(){
                         </Select>
                     </div>
                 </div>
-                <SheetFooter>
+
+                {/* ← フッターは下部に固定される */}
+                <SheetFooter className="p-4 border-t mt-auto">
                     <Button type="submit" variant="default" className="bg-white text-slate-950 cursor-pointer">
                         追加する
                     </Button>
