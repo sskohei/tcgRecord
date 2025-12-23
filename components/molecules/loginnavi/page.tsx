@@ -1,5 +1,6 @@
 import { Button } from "@/components/atoms/Button/page"
 import Link from "next/link"
+import SettingButton from "../settingButton/page"
 
 function Loginnavi(){
     return(

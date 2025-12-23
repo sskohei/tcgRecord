@@ -5,6 +5,7 @@ import Adddeck from "@/components/molecules/addButton/addDeck/page";
 import Deckcard from "@/components/organism/deckcard/page";
 import TagsButtle from "../../organism/Tags_Buttle/page";
 import ChartsGroup from "@/components/organism/Charts_group/page";
+import SettingButton from "@/components/molecules/settingButton/page";
 
 function Mainmenu(){
     return(
@@ -16,6 +17,7 @@ function Mainmenu(){
             </TabsList>
             <TabsContent value="対戦履歴">
                 <Addbuttle/>
+                <SettingButton/>
                 <Gamerecord/>
             </TabsContent>
             <TabsContent value="統計">
